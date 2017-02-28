@@ -17,13 +17,13 @@ The following code will crash you app because of “unrecognized selector crash�
 
 HardShell will protect it from this crash. Let’s show before and after.
 
- Before:
+Before:
 
-<img src="Screenshots/Before.png" align="left" height="66" width="335">
+<img src="Screenshots/Before.png" align="left" height="66" width="400">
 
 After:
 
-![After](Screenshots/After.png)
+<img src="Screenshots/After.png" align="left" height="66" width="400">
 
 Other features will come soon.
 
