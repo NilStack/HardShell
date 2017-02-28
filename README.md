@@ -23,6 +23,8 @@ Before:
 
 After:
 
+The crash disappeared and the root cause is shown.
+
 <img src="Screenshots/After.png" align="center" height="28" width="400">
 
 Other features will come soon.
