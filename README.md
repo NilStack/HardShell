@@ -21,13 +21,9 @@ HardShell will protect it from this crash. Let’s show before and after.
 
 ![Before](Screenshots/Before.png)
 
-[![Before](https://img.youtube.com/vi/6ELUrOzLnD8/0.jpg)](https://www.youtube.com/watch?v=6ELUrOzLnD8)
-
 After:
 
 ![After](Screenshots/After.png)
-
-[![After](https://img.youtube.com/vi/zacveg88lcY/0.jpg)](https://www.youtube.com/watch?v=zacveg88lcY)
 
 ### Coming soon ...
 
