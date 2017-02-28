@@ -19,11 +19,11 @@ HardShell will protect it from this crash. Let’s show before and after.
 
 Before:
 
-<img src="Screenshots/Before.png" align="left" height="66" width="400">
+<img src="Screenshots/Before.png" align="center" height="66" width="400">
 
 After:
 
-<img src="Screenshots/After.png" align="left" height="66" width="400">
+<img src="Screenshots/After.png" align="center" height="66" width="400">
 
 Other features will come soon.
 
