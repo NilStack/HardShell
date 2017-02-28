@@ -23,7 +23,7 @@ Before:
 
 After:
 
-<img src="Screenshots/After.png" align="center" height="66" width="400">
+<img src="Screenshots/After.png" align="center" height="28" width="400">
 
 Other features will come soon.
 
