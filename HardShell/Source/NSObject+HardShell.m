@@ -11,6 +11,10 @@
 
 @implementation NSObject(HardShell)
 
+/* TODO: 1. what if forwardInvocation: is rewritten by original class
+ *       2. what if class_addMethod fails?
+ *
+*/
 - (id)forwardingTargetForSelector:(SEL)aSelector {
     
     NSString *originClass = NSStringFromClass([self class]);
@@ -29,7 +33,6 @@
         
     });
     
-    // TODO: what if class_addMethod fails?
     class_addMethod(stubClass, aSelector, imp, types);
     id stub = [[stubClass alloc] init];
     
