@@ -30,6 +30,7 @@
         return 0;
         
     });
+    // TODO: give default types "v@:", don't know if it's good choice
     class_addMethod(stubClass, aSelector, imp, "v@:");
     
     id stub = [[stubClass alloc] init];
