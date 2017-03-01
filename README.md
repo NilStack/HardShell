@@ -4,7 +4,7 @@ HardShell is a protector to keep app from specific crashes. Now it only protects
 
 The idea is from [Baymax's introduction](https://neyoufan.github.io/2017/01/13/ios/BayMax_HTSafetyGuard/) which is from Wangyi (Hangzhou). They promise Baymax SDK will be released but don't mention the schedule and if it will be opensourced. So I build HardShell.
 
-It is still at early stages. Please help me to do more testing.  
+It is still at early stages and not product ready to launch. Please help me to do more testing.  
 
 ### unrecognized selector crash
 
