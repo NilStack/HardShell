@@ -1,6 +1,6 @@
 # HardShell
 
-HardShell is a protector to keep app from specific crashes. Now it only catches and protects app from the crash caused by "unrecognized selector sent to instance". More features will come step by step.
+HardShell is a protector to keep app from specific crashes. Now it only protects app from the crash caused by "unrecognized selector sent to instance". More features will come step by step.
 
 The idea is from [Baymax's introduction](https://neyoufan.github.io/2017/01/13/ios/BayMax_HTSafetyGuard/) which is from Wangyi (Hangzhou). They promise Baymax SDK will be released but don't mention the schedule and if it will be opensourced. So I build HardShell.
 
