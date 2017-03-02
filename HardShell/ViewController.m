@@ -24,9 +24,18 @@
     [label sizeToFit];
     [self.view addSubview:label];
     
+    // unregonized selector crash
     UIButton *button = [[UIButton alloc] init];
     [button performSelector:@selector(noThisMethod:)];
     [button performSelector:@selector(description)];
+    
+    // KVO 
+    [label addObserver:self forKeyPath:@"text" options:NSKeyValueObservingOptionNew context:nil];
+    [label addObserver:self forKeyPath:@"text" options:NSKeyValueObservingOptionNew context:nil];
+    [label removeObserver:self forKeyPath:@"textColor"];
+    
+    //label.text = @"new text";
+    
 }
 
 

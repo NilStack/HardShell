@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A7E4ABA5540BF65280276B4 /* libPods-HardShell.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD3A600087CD3E37CB108CF /* libPods-HardShell.a */; };
 		B82387F21E6543C700305CF6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B82387F11E6543C700305CF6 /* main.m */; };
 		B82387F51E6543C700305CF6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B82387F41E6543C700305CF6 /* AppDelegate.m */; };
 		B82387F81E6543C700305CF6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B82387F71E6543C700305CF6 /* ViewController.m */; };
@@ -14,9 +15,14 @@
 		B82387FD1E6543C700305CF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B82387FC1E6543C700305CF6 /* Assets.xcassets */; };
 		B82388001E6543C700305CF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B82387FE1E6543C700305CF6 /* LaunchScreen.storyboard */; };
 		B823880D1E65463E00305CF6 /* NSObject+HardShell.m in Sources */ = {isa = PBXBuildFile; fileRef = B823880C1E65463E00305CF6 /* NSObject+HardShell.m */; };
+		B82B93391E682BDB00BAA776 /* HSKVOProtector.m in Sources */ = {isa = PBXBuildFile; fileRef = B82B93381E682BDB00BAA776 /* HSKVOProtector.m */; };
+		B82B933C1E682E2F00BAA776 /* NSObject+HSKVOProtector.m in Sources */ = {isa = PBXBuildFile; fileRef = B82B933B1E682E2F00BAA776 /* NSObject+HSKVOProtector.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3CB84DC91811D1175E0AD8CA /* Pods-HardShell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HardShell.release.xcconfig"; path = "Pods/Target Support Files/Pods-HardShell/Pods-HardShell.release.xcconfig"; sourceTree = "<group>"; };
+		7BD3A600087CD3E37CB108CF /* libPods-HardShell.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HardShell.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95597BDB314926FB3FCA94C9 /* Pods-HardShell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HardShell.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HardShell/Pods-HardShell.debug.xcconfig"; sourceTree = "<group>"; };
 		B82387ED1E6543C700305CF6 /* HardShell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HardShell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B82387F11E6543C700305CF6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B82387F31E6543C700305CF6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -29,6 +35,10 @@
 		B82388011E6543C700305CF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B823880B1E65463E00305CF6 /* NSObject+HardShell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HardShell.h"; sourceTree = "<group>"; };
 		B823880C1E65463E00305CF6 /* NSObject+HardShell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HardShell.m"; sourceTree = "<group>"; };
+		B82B93371E682BDB00BAA776 /* HSKVOProtector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSKVOProtector.h; sourceTree = "<group>"; };
+		B82B93381E682BDB00BAA776 /* HSKVOProtector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSKVOProtector.m; sourceTree = "<group>"; };
+		B82B933A1E682E2F00BAA776 /* NSObject+HSKVOProtector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HSKVOProtector.h"; sourceTree = "<group>"; };
+		B82B933B1E682E2F00BAA776 /* NSObject+HSKVOProtector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HSKVOProtector.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +46,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A7E4ABA5540BF65280276B4 /* libPods-HardShell.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		471ACCAD7DF225A39E4B42C7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				95597BDB314926FB3FCA94C9 /* Pods-HardShell.debug.xcconfig */,
+				3CB84DC91811D1175E0AD8CA /* Pods-HardShell.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		50B194763E2491D0B4C4CBC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7BD3A600087CD3E37CB108CF /* libPods-HardShell.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B82387E41E6543C700305CF6 = {
 			isa = PBXGroup;
 			children = (
 				B82387EF1E6543C700305CF6 /* HardShell */,
 				B82387EE1E6543C700305CF6 /* Products */,
+				471ACCAD7DF225A39E4B42C7 /* Pods */,
+				50B194763E2491D0B4C4CBC7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,6 +118,10 @@
 			children = (
 				B823880B1E65463E00305CF6 /* NSObject+HardShell.h */,
 				B823880C1E65463E00305CF6 /* NSObject+HardShell.m */,
+				B82B93371E682BDB00BAA776 /* HSKVOProtector.h */,
+				B82B93381E682BDB00BAA776 /* HSKVOProtector.m */,
+				B82B933A1E682E2F00BAA776 /* NSObject+HSKVOProtector.h */,
+				B82B933B1E682E2F00BAA776 /* NSObject+HSKVOProtector.m */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -99,9 +133,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B82388041E6543C700305CF6 /* Build configuration list for PBXNativeTarget "HardShell" */;
 			buildPhases = (
+				D5A8C6E6A8716505F18ADCD2 /* [CP] Check Pods Manifest.lock */,
 				B82387E91E6543C700305CF6 /* Sources */,
 				B82387EA1E6543C700305CF6 /* Frameworks */,
 				B82387EB1E6543C700305CF6 /* Resources */,
+				F41C9CA0F02B2778088AD32C /* [CP] Embed Pods Frameworks */,
+				C501A5B116A08F7B3AD2E077 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -159,15 +196,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C501A5B116A08F7B3AD2E077 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HardShell/Pods-HardShell-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5A8C6E6A8716505F18ADCD2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F41C9CA0F02B2778088AD32C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HardShell/Pods-HardShell-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B82387E91E6543C700305CF6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B82387F81E6543C700305CF6 /* ViewController.m in Sources */,
+				B82B933C1E682E2F00BAA776 /* NSObject+HSKVOProtector.m in Sources */,
 				B823880D1E65463E00305CF6 /* NSObject+HardShell.m in Sources */,
 				B82387F51E6543C700305CF6 /* AppDelegate.m in Sources */,
 				B82387F21E6543C700305CF6 /* main.m in Sources */,
+				B82B93391E682BDB00BAA776 /* HSKVOProtector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +372,7 @@
 		};
 		B82388051E6543C700305CF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95597BDB314926FB3FCA94C9 /* Pods-HardShell.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5K8UAH3FUM;
@@ -297,6 +385,7 @@
 		};
 		B82388061E6543C700305CF6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CB84DC91811D1175E0AD8CA /* Pods-HardShell.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5K8UAH3FUM;
@@ -326,6 +415,7 @@
 				B82388061E6543C700305CF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,21 @@
+PODS:
+  - JRSwizzle (1.1.0)
+
+DEPENDENCIES:
+  - JRSwizzle (from `https://github.com/rentzsch/jrswizzle.git`)
+
+EXTERNAL SOURCES:
+  JRSwizzle:
+    :git: https://github.com/rentzsch/jrswizzle.git
+
+CHECKOUT OPTIONS:
+  JRSwizzle:
+    :commit: b4ecc886d94342243f7ec2425ba48eef8c6eb9aa
+    :git: https://github.com/rentzsch/jrswizzle.git
+
+SPEC CHECKSUMS:
+  JRSwizzle: e80ec8c5ac81248a2ba1e685109d0464e957d465
+
+PODFILE CHECKSUM: fb6aad0a1efca3067708c09d69573f27225ed041
+
+COCOAPODS: 1.2.0
