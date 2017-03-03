@@ -36,7 +36,7 @@ For example:
 
 <img src="Screenshots/KVOCode.png" align="center" height="135" width="589">
 
-<img src="Screenshots/KVOLog.png" align="center" height="777" width="404">
+<img src="Screenshots/KVOLog.png" align="center" height="77" width="404">
 
 Other features will come soon.
 
