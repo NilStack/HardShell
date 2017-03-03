@@ -35,7 +35,6 @@
     [label removeObserver:self forKeyPath:@"textColor"];
     
     //label.text = @"new text";
-    
 }
 
 

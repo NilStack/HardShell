@@ -50,6 +50,7 @@ static const void *keypathMapKey=&keypathMapKey;
     });
 }
 
+// TODO: swizzle observeValueForKeyPath
 - (void)hsAddObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options context:(void *)context {
     
     if(!self.kvoProtector) {
@@ -59,7 +60,7 @@ static const void *keypathMapKey=&keypathMapKey;
         
     NSDictionary *kvoInfo;
     if(context) {
-       kvoInfo = @{@"Observer": observer, @"KeyPath": keyPath, @"Options": [NSNumber numberWithInteger:options], @"Context": (__bridge NSObject *)(context)};
+        kvoInfo = @{@"Observer": observer, @"Observed": self, @"KeyPath": keyPath, @"Options": [NSNumber numberWithInteger:options], @"Context": (__bridge NSObject *)(context)};
     } else {
        kvoInfo = @{@"Observer": observer, @"KeyPath": keyPath, @"Options": [NSNumber numberWithInteger:options]};
     }
@@ -93,7 +94,7 @@ static const void *keypathMapKey=&keypathMapKey;
 - (void)hsRemoveObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath {
     
     if(!self.kvoProtector) {
-        NSLog(@"Error: no observer obserse you.");
+        NSLog(@"Error: no observer observes you.");
         return;
     } else {
         HSKVOProtector *kvoProtector = self.kvoProtector;
@@ -114,7 +115,7 @@ static const void *keypathMapKey=&keypathMapKey;
             if (kvoInfoArray.count == 0) {
                 NSMutableDictionary *mutableObserverDict = [observerDict mutableCopy];
                 [mutableObserverDict removeObjectForKey:keyPath];
-                [self removeObserver:kvoProtector forKeyPath:keyPath];
+                [self hsRemoveObserver:kvoProtector forKeyPath:keyPath];
             }
             
         }
@@ -122,10 +123,12 @@ static const void *keypathMapKey=&keypathMapKey;
     
 }
 
-- (void)hsObserveValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
-    
-    NSLog(@"hsObserveValueForKeyPath");
-    
+- (void)hsDealloc {
+    if(self.kvoProtector) {
+        NSMutableDictionary *mutableObserverDict = [self.kvoProtector.observerDict mutableCopy];
+        [mutableObserverDict removeAllObjects];
+        self.kvoProtector = nil;
+    }
 }
 
 + (void)swizzleAddObserver {
@@ -144,9 +147,10 @@ static const void *keypathMapKey=&keypathMapKey;
     }
 }
 
-+ (void)swizzleObserveValueForKeyPath {
++ (void)swizzleDealloc {
     NSError *error;
-    BOOL success = [[self class] jr_swizzleMethod:@selector(removeObserver:forKeyPath:) withMethod:@selector(hsObserveValueForKeyPath:ofObject:change:context:) error:&error];
+    const SEL deallocSel  = NSSelectorFromString(@"dealloc");
+    BOOL success = [[self class] jr_swizzleMethod:deallocSel withMethod:@selector(hsDealloc) error:&error];
     if (!success || error) {
         NSLog(@"Can't swizzle methods - %@", [error description]);
     }
